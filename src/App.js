@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Container from 'react-bootstrap/Container'
 import { Nav, Navbar } from 'react-bootstrap';
+import Footer from './components/Footer';
 
 
 class App extends React.Component {
@@ -49,6 +50,9 @@ class App extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+
+
+          <Footer />
         </Container>
       </Router>
     ]
