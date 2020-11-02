@@ -7,6 +7,11 @@ import {
 import Container from 'react-bootstrap/Container'
 import { Nav, Navbar } from 'react-bootstrap';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import MentionLegal from './pages/MentionLegale';
+
 
 
 class App extends React.Component {
@@ -47,11 +52,16 @@ class App extends React.Component {
                 <Link className="nav-link" to="/a-propos">À Propos</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
 
+
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+                <Route path="/" exact render={() => <HomePage info={this.state.home}/>} />
+                <Route path="/a-propos" exact render={() => <AboutPage info={this.state.about}/>} />
+                <Route path="/contact" exact render={() => <ContactPage info={this.state.contact} />} />
+                <Route path="/mention-legale" exact render={()=> <MentionLegal />} />
 
-
+          
           <Footer />
         </Container>
       </Router>
