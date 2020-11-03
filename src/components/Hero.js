@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col,Row, Container, Jumbotron } from 'react-bootstrap'
 
-function Hero(props, Children){
+function Hero(props){
     let prop = props.info
     return [
     <Jumbotron className="bg-transparent jumbotron-fluid text-center">

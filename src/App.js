@@ -41,10 +41,12 @@ class App extends React.Component {
 
   render(){
     return [
-      <Router>
         <Container className="p-0" fluid={true}>
+      <Router>
           <Navbar className="border-bottom" bg="transparent" expand="md">
-            <Navbar.Brand>Baptiste Chaudron</Navbar.Brand>
+            <Navbar.Brand>
+              <Link className="navbar-brand" to="https://www.linkedin.com/in/baptiste-chaudron-61a118161/">Baptiste Chaudron</Link>
+              </Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav>
@@ -60,11 +62,9 @@ class App extends React.Component {
                 <Route path="/a-propos" exact render={() => <AboutPage info={this.state.about}/>} />
                 <Route path="/contact" exact render={() => <ContactPage info={this.state.contact} />} />
                 <Route path="/mention-legale" exact render={()=> <MentionLegal />} />
-
-          
           <Footer />
-        </Container>
       </Router>
+        </Container>
     ]
   }
 }
