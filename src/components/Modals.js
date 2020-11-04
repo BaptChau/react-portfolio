@@ -7,7 +7,7 @@ function Modals(props) {
     const handleShow = () => setShow(true);
 
     return (
-        <>
+        <div>
             <Button variant="primary" onClick={handleShow}>En Savoir Plus
             </Button>
             <Modal show={show} onHide={handleClose}>
@@ -20,8 +20,7 @@ function Modals(props) {
                         Fermer
           </Button> 
                 </Modal.Footer>
-            </Modal>
-        </>
+            </Modal></div>
     )
 }
 
