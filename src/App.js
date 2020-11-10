@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import MentionLegal from './pages/MentionLegale';
+import CVShow from './pages/CVShow';
 
 
 
@@ -62,6 +63,7 @@ class App extends React.Component {
                 <Route path="/a-propos" exact render={() => <AboutPage info={this.state.about}/>} />
                 <Route path="/contact" exact render={() => <ContactPage info={this.state.contact} />} />
                 <Route path="/mention-legale" exact render={()=> <MentionLegal />} />
+                <Route path="/cv-baptiste" exact render={() => <CVShow />} />
           <Footer />
       </Router>
         </Container>
