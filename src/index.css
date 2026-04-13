@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white font-sans antialiased; }
+  a    { @apply no-underline transition-colors duration-200; }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  /* ── Accent (orange-700 light / orange-400 dark) ── */
+  .c-accent        { @apply text-orange-700 dark:text-orange-400; }
+  .c-accent-bg     { @apply bg-orange-700  dark:bg-orange-500; }
+  .c-accent-border { @apply border-orange-700 dark:border-orange-400; }
+  .c-accent-badge  {
+    @apply text-orange-700 dark:text-orange-400
+           bg-orange-100   dark:bg-orange-900
+           border border-orange-300 dark:border-orange-800;
+  }
+  .c-divider-accent { @apply bg-orange-700 dark:bg-orange-400; }
+
+  /* ── Texte ── */
+  .c-text  { @apply text-neutral-900 dark:text-white; }
+  .c-muted { @apply text-neutral-500 dark:text-neutral-400; }
+
+  /* ── Surfaces ── */
+  .c-page  { @apply bg-white      dark:bg-neutral-900; }
+  .c-panel { @apply bg-gray-50    dark:bg-neutral-800; }
+  .c-card  {
+    @apply bg-white dark:bg-neutral-800
+           border border-gray-200 dark:border-neutral-700 shadow-sm;
+  }
+  .c-nav   {
+    @apply bg-white/95 dark:bg-neutral-900/95
+           border-b border-gray-200 dark:border-neutral-800;
+  }
+  .c-divider { @apply border-gray-200 dark:border-neutral-700; }
+
+  /* ── Boutons ── */
+  .c-btn-primary {
+    @apply bg-orange-700 dark:bg-orange-500 text-white font-semibold
+           px-6 py-3 rounded-lg shadow-sm
+           hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5;
+  }
+  .c-btn-outline {
+    @apply border-2 border-orange-700 dark:border-orange-400
+           text-orange-700 dark:text-orange-400 font-semibold
+           px-6 py-3 rounded-lg
+           hover:bg-orange-100 dark:hover:bg-orange-900
+           transition-all duration-200 hover:-translate-y-0.5;
+  }
+
+  /* ── Badges ── */
+  .c-tech-badge {
+    @apply text-xs font-semibold px-2 py-0.5 rounded-md
+           text-orange-700 dark:text-orange-400
+           bg-orange-100   dark:bg-orange-900
+           border border-orange-300 dark:border-orange-800;
+  }
+
+  /* ── Skill badge (compétences) ── */
+  .c-skill-badge {
+    @apply bg-white dark:bg-neutral-800
+           border border-gray-200 dark:border-neutral-700 shadow-sm
+           text-neutral-900 dark:text-white
+           text-sm font-medium px-4 py-2 rounded-lg cursor-default
+           hover:border-orange-700 dark:hover:border-orange-400
+           hover:text-orange-700   dark:hover:text-orange-400
+           hover:bg-orange-100     dark:hover:bg-orange-900
+           transition-all duration-200;
+  }
+
+  /* ── Carte lien (contact / about) ── */
+  .c-link-card {
+    @apply bg-white dark:bg-neutral-800
+           border border-gray-200 dark:border-neutral-700 shadow-sm
+           rounded-xl p-6 flex flex-col items-center gap-3 text-center
+           hover:border-orange-700 dark:hover:border-orange-400
+           hover:-translate-y-1 hover:shadow-md
+           transition-all duration-200;
+  }
 }

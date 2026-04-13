@@ -1,20 +1,16 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Footer(){
-   
-    return [
-        <Container fluid={true} className="footer-copyright ">
-            <Row className="border-top justify-content-between p-3 ">
-                <Col className="p-0" md={3} sm={12}>Baptiste Chaudron</Col>
-                <Col className="p-0" md={3} sm={12}>
-                <Link to="/mention-legale">Mention Légale</Link>
-                </Col>
-                <Col className="p-0 d-flex justify-content-end" md={3} sm={12}>Réalisé par Baptiste Chaudron</Col>
-            </Row>
-        </Container>
-    ]
+export default function Footer() {
+  return (
+    <footer className="c-panel border-t border-gray-200 dark:border-neutral-800 px-4 py-5">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-sm c-muted">
+        <span>Baptiste Chaudron</span>
+        <Link to="/mention-legale" className="hover:c-accent transition-colors duration-200">
+          Mentions légales
+        </Link>
+        <span>Réalisé avec React & Tailwind CSS</span>
+      </div>
+    </footer>
+  );
 }
-
-export default Footer;
