@@ -7,8 +7,8 @@ const skillCategories = [
   { label: 'Frontend',         items: ['Vue.js', 'JavaScript', 'React', 'Angular', 'HTML/CSS', 'Sass'] },
   { label: 'Mobile',           items: ['Flutter', 'Android Studio'] },
   { label: 'Bases de données', items: ['PostgreSQL', 'MySQL'] },
-  { label: 'DevOps / Outils',  items: ['Docker', 'Git', 'CI/CD Bamboo', 'Ansible', 'PHPUnit', 'Codeception', 'Playwright', 'Jira'] },
-  { label: 'IA / Chatbot',     items: ['Azure OpenAI', 'Illuin', 'ChatBot', 'CallBot'] },
+  { label: 'DevOps / Outils',  items: ['Docker', 'Git', 'CI/CD Bamboo', 'Ansible', 'VPS Configuration', 'PHPUnit', 'Codeception', 'Playwright', 'Jira'] },
+  { label: 'IA / Chatbot',     items: ['Azure OpenAI', 'Illuin', 'ChatBot', 'CallBot', 'Claude Code', 'Codex'] },
   { label: 'Méthodologies',    items: ['Agile / Scrum', 'Conventional Commit', 'Revue de code'] },
   { label: 'En cours',         items: ['Go', 'GraphQL'] },
 ];
