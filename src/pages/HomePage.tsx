@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiExternalLink } from 'react-icons/fi';
 import photo from '../assets/avatar-gratuit.png';

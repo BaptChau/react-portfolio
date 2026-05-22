@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import { FiFileText, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,9 @@ const skillCategories = [
   { label: 'En cours',         items: ['Go', 'GraphQL'] },
 ];
 
-function Block({ title, children }) {
+type BlockProps = { title: string; children: ReactNode };
+
+function Block({ title, children }: BlockProps) {
   return (
     <div className="c-card rounded-xl p-6">
       <p className="text-xs font-bold uppercase tracking-widest c-accent mb-5">{title}</p>
@@ -22,7 +24,14 @@ function Block({ title, children }) {
   );
 }
 
-function TimelineItem({ date, title, sub, bullets }) {
+type TimelineItemProps = {
+  date: string;
+  title: string;
+  sub?: string;
+  bullets?: string[];
+};
+
+function TimelineItem({ date, title, sub, bullets }: TimelineItemProps) {
   return (
     <div className="relative pl-5 pb-7 last:pb-0">
       <span className="absolute left-[-1px] top-1.5 w-2.5 h-2.5 rounded-full
@@ -44,7 +53,15 @@ function TimelineItem({ date, title, sub, bullets }) {
   );
 }
 
-function LinkCard({ href, external, icon, label, sub }) {
+type LinkCardProps = {
+  href: string;
+  external?: boolean;
+  icon: ReactNode;
+  label: string;
+  sub: string;
+};
+
+function LinkCard({ href, external, icon, label, sub }: LinkCardProps) {
   const content = (
     <>
       <span className="c-accent">{icon}</span>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiGithub, FiLinkedin, FiFileText } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 

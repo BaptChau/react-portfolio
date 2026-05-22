@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Link, useLocation } from 'react-router-dom';
+import { useState, type ReactNode } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { useTheme } from './hooks/useTheme';
 import Footer from './components/Footer';
@@ -9,7 +9,13 @@ import ContactPage from './pages/ContactPage';
 import MentionLegal from './pages/MentionLegale';
 import CVShow from './pages/CVShow';
 
-function NavLink({ to, children, onClick }) {
+type NavLinkProps = {
+  to: string;
+  children: ReactNode;
+  onClick?: () => void;
+};
+
+function NavLink({ to, children, onClick }: NavLinkProps) {
   const location = useLocation();
   const active = location.pathname === to;
   return (
@@ -93,11 +99,13 @@ export default function App() {
       <div className="min-h-screen flex flex-col c-page">
         <Navbar />
         <main className="flex-1">
-          <Route path="/"               exact component={HomePage} />
-          <Route path="/a-propos"       exact component={AboutPage} />
-          <Route path="/contact"        exact component={ContactPage} />
-          <Route path="/mention-legale" exact component={MentionLegal} />
-          <Route path="/cv-baptiste"    exact component={CVShow} />
+          <Routes>
+            <Route path="/"               element={<HomePage />} />
+            <Route path="/a-propos"       element={<AboutPage />} />
+            <Route path="/contact"        element={<ContactPage />} />
+            <Route path="/mention-legale" element={<MentionLegal />} />
+            <Route path="/cv-baptiste"    element={<CVShow />} />
+          </Routes>
         </main>
         <Footer />
       </div>
