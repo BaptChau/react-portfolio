@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiDownload } from 'react-icons/fi';
 
 export default function CVShow() {
