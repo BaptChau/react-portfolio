@@ -1,4 +1,5 @@
 import { FiDownload } from 'react-icons/fi';
+import cvPdf from '../assets/cv_baptiste_chaudron.pdf';
 
 export default function CVShow() {
   return (
@@ -11,8 +12,8 @@ export default function CVShow() {
           <div className="w-12 h-0.5 c-divider-accent" />
         </div>
         <a
-          href="/cv_baptiste_chaudron.pdf"
-          download
+          href={cvPdf}
+          download="cv_baptiste_chaudron.pdf"
           className="c-btn-primary flex items-center gap-2 self-start sm:self-auto"
         >
           <FiDownload size={16} /> Télécharger le PDF
@@ -21,7 +22,7 @@ export default function CVShow() {
 
       <div className="c-card rounded-xl overflow-hidden">
         <iframe
-          src="/cv_baptiste_chaudron.pdf"
+          src={cvPdf}
           title="CV Baptiste Chaudron"
           className="w-full"
           style={{ height: '85vh', border: 'none' }}
