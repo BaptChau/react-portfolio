@@ -11,6 +11,13 @@ const skills = [
 
 const projects = [
   {
+    title: 'Mon Député',
+    description: "Consultation des députés de l'Assemblée nationale et de leurs votes à partir des données ouvertes (~8 400 scrutins actualisés toutes les 6 h). API Flask, SPA Vue 3, déploiement Docker Compose.",
+    tech: ['Python', 'Flask', 'Vue.js', 'TypeScript', 'Docker'],
+    github: null,
+    demo: 'https://mon-depute.eu/',
+  },
+  {
     title: 'Tech Mapper',
     description: "Base de connaissance pour associer chaque technologie à son langage. Full-stack : frontend Vue-style, API Express/Node.js avec auth Basic, données JSON.",
     tech: ['Node.js', 'Express', 'JavaScript', 'HTML/CSS'],
@@ -65,7 +72,7 @@ export default function HomePage() {
           <div className="flex flex-col-reverse md:flex-row items-center gap-12">
             <div className="flex-1">
               <span className="inline-block c-accent-badge text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-5">
-                Développeur Full Stack
+                Développeur Full Stack Confirmé
               </span>
               <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-3 c-text">
                 Bonjour, je suis<br />
