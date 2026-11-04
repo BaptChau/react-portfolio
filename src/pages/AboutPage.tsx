@@ -7,10 +7,10 @@ const skillCategories = [
   { label: 'Frontend',         items: ['Vue.js', 'JavaScript', 'React', 'Angular', 'HTML/CSS', 'Sass'] },
   { label: 'Mobile',           items: ['Flutter', 'Android Studio'] },
   { label: 'Bases de données', items: ['PostgreSQL', 'MySQL'] },
-  { label: 'DevOps / Outils',  items: ['Docker', 'Git', 'CI/CD Bamboo', 'Ansible', 'VPS Configuration', 'PHPUnit', 'Codeception', 'Playwright', 'Jira'] },
-  { label: 'IA / Chatbot',     items: ['Azure OpenAI', 'Illuin', 'ChatBot', 'CallBot', 'Claude Code', 'Codex'] },
+  { label: 'DevOps / Outils',  items: ['Docker', 'Git', 'CI/CD Bamboo', 'Ansible', 'PHPUnit', 'Codeception', 'Playwright', 'Jira'] },
+  { label: 'IA / Chatbot',     items: ['Azure OpenAI', 'Illuin', 'ChatBot', 'CallBot'] },
   { label: 'Méthodologies',    items: ['Agile / Scrum', 'Conventional Commit', 'Revue de code'] },
-  { label: 'En cours',         items: ['Go', 'GraphQL'] },
+  { label: 'En cours / notions', items: ['Go', 'GraphQL'] },
 ];
 
 type BlockProps = { title: string; children: ReactNode };
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <span className="c-accent font-semibold">PHP/Symfony</span> et{' '}
         <span className="c-accent font-semibold">Vue.js</span>, avec une expérience en
         environnement bancaire critique (Boursorama). Au-delà du code, ce qui m'anime c'est
-        de comprendre les problématiques métier pour y apporter des solutions durables.
+        de comprendre les problématiques métier pour y apporter des solutions durables et adaptées.
         Rigoureux et curieux, je m'implique aussi bien dans la conception que dans la relation
         avec les équipes produit et fonctionnelles.
       </p>
@@ -97,13 +97,23 @@ export default function AboutPage() {
         <Block title="Expériences professionnelles">
           <div className="relative border-l-2 border-gray-200 dark:border-neutral-700 pl-4">
             <TimelineItem
-              date="Janv. 2023 – Présent"
+              date="Sept. 2026 – Présent"
+              title="Développeur Full Stack Confirmé"
+              sub="Olky Group · CDI — Fentange, Luxembourg"
+              bullets={[
+                "Fintech spécialisée dans les services bancaires digitaux",
+                "Maintenance et évolution de l'application web bancaire",
+                'Développement backend PHP / Symfony',
+              ]}
+            />
+            <TimelineItem
+              date="Janv. 2023 – Août 2026"
               title="Consultant Développeur Web"
               sub="Bloomind · ESN — Nancy"
               bullets={[
                 'Mission Boursorama (jan. 2023 – déc. 2025) : PHP 8.1+, Symfony, Vue.js, Flutter, Azure OpenAI',
                 'Mécénat Pet Rescue (jan. – fév. 2026) : Symfony / Vue.js, Agile',
-                'Équipe interne (fév. 2026 – présent) : Node.js / Express, Vue.js 3',
+                'Équipe interne (fév. – août 2026) : Node.js / Express, Vue.js 3',
               ]}
             />
             <TimelineItem
@@ -118,7 +128,7 @@ export default function AboutPage() {
             <TimelineItem
               date="Avr. – Juin 2019"
               title="Stagiaire Développeur Web Full Stack"
-              sub="Albéa Tubes France — Sainte-Ménéhould"
+              sub="Albea Tubes France · Stage DUT — Sainte-Menehould"
               bullets={[
                 'Migration MS Access → web, base +100 000 lignes',
                 'PHP 7.4, MySQL, jQuery/Ajax, Active Directory',
@@ -161,7 +171,7 @@ export default function AboutPage() {
             <p className="text-sm font-semibold c-text mb-2">Club de handball</p>
             <ul className="space-y-1.5">
               {[
-                'Vice-président administratif depuis juin 2022',
+                'Vice-président administratif depuis juin 2022 : gestion des relations extra-sportives du club',
                 'Entraîneur seniors (2021-2022) et U11 (depuis sept. 2023)',
                 'Responsable de salle, chronométreur, secrétaire à la table de marque',
               ].map((b) => (
